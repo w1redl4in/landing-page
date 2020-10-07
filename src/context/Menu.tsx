@@ -10,27 +10,6 @@ interface MenuState {
   isOpen: boolean;
   menuItems: { title: string; route: string }[];
 }
-// const MenuContext: MenuContextProps = {
-//   isOpen: false,
-//   menuItems: [
-//     {
-//       title: 'About',
-//       route: 'about',
-//     },
-//     {
-//       title: 'Discover',
-//       route: 'discover',
-//     },
-//     {
-//       title: 'Services',
-//       route: 'services',
-//     },
-//     {
-//       title: 'Sign Up',
-//       route: 'signup',
-//     },
-//   ],
-// };
 
 const MenuContext = createContext<MenuContextProps>({} as MenuContextProps);
 
