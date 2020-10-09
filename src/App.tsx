@@ -1,20 +1,21 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import { BrowserRouter } from 'react-router-dom';
-import { GlobalStyles } from './styles/global';
+import Theme from './styles/global';
 import Sidebar from './components/Sidebar';
-import { MenuProvider } from './context/Menu';
+import RootContext from './hooks';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <MenuProvider>
+    <RootContext>
       <BrowserRouter>
-        <GlobalStyles />
-        <Sidebar />
-        <Navbar />
+        <Theme>
+          <Sidebar />
+          <Navbar />
+        </Theme>
       </BrowserRouter>
-    </MenuProvider>
+    </RootContext>
   );
-}
+};
 
 export default App;

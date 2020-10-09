@@ -1,4 +1,5 @@
 import React, { createContext, useCallback, useContext, useState } from 'react';
+import { useTheme } from './theme';
 
 interface MenuContextProps {
   isOpen: boolean;
@@ -14,6 +15,10 @@ interface MenuState {
 const MenuContext = createContext<MenuContextProps>({} as MenuContextProps);
 
 const MenuProvider: React.FC = ({ children }) => {
+  const { handleTheme } = useTheme();
+
+  console.log(handleTheme);
+
   const [data, setData] = useState<MenuState>({
     isOpen: false,
     menuItems: [

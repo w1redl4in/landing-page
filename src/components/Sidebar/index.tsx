@@ -1,5 +1,6 @@
 import React from 'react';
-import { useMenu } from '../../context/Menu';
+import { useMenu } from '../../hooks/menu';
+import { useTheme } from '../../hooks/theme';
 import {
   SidebarContainer,
   Icon,
@@ -14,6 +15,8 @@ import {
 const Sidebar: React.FC = () => {
   const { isOpen, menuItems, openOrCloseMenu } = useMenu();
 
+  const { handleTheme } = useTheme();
+
   return (
     <SidebarContainer isOpen={isOpen}>
       <Icon onClick={openOrCloseMenu}>
@@ -26,7 +29,9 @@ const Sidebar: React.FC = () => {
           ))}
         </SidebarMenu>
         <SideBtnWrap>
-          <SidebarRoute to="signin">Sign Up</SidebarRoute>
+          <SidebarRoute to="/" onClick={handleTheme}>
+            Theme Up!
+          </SidebarRoute>
         </SideBtnWrap>
       </SidebarWrapper>
     </SidebarContainer>
