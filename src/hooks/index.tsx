@@ -5,11 +5,11 @@ import Theme from '../styles/global';
 
 const RootContext: React.FC = ({ children }) => {
   return (
-    <MenuProvider>
-      <ThemeProvider>
+    <ThemeProvider>
+      <MenuProvider>
         <Theme>{children}</Theme>
-      </ThemeProvider>
-    </MenuProvider>
+      </MenuProvider>
+    </ThemeProvider>
   );
 };
 

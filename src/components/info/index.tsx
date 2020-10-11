@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from '../button/styles';
-import { InfoData } from './info';
+import { InfoData } from './green-info';
 import {
   InfoContainer,
   InfoWrapper,

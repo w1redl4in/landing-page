@@ -4,22 +4,41 @@ import Info from '../components/info';
 import Navbar from '../components/navbar';
 import Sidebar from '../components/sidebar';
 import {
-  infoData1,
-  infoData2,
-  infoData3,
-  infoData4,
-} from '../components/info/info';
+  greenInfoData1,
+  greenInfoData2,
+  greenInfoData3,
+  greenInfoData4,
+} from '../components/info/green-info';
+import {
+  blueInfoData1,
+  blueInfoData2,
+  blueInfoData3,
+  blueInfoData4,
+} from '../components/info/blue-info';
+import { useTheme } from '../hooks/theme';
 
 const Home: React.FC = () => {
+  const { theme } = useTheme();
   return (
     <>
       <Sidebar />
       <Navbar />
       <Hero />
-      <Info {...infoData1} />
-      <Info {...infoData2} />
-      <Info {...infoData3} />
-      <Info {...infoData4} />
+      {theme === 'darkMode' ? (
+        <>
+          <Info {...greenInfoData1} />
+          <Info {...greenInfoData2} />
+          <Info {...greenInfoData3} />
+          <Info {...greenInfoData4} />
+        </>
+      ) : (
+        <>
+          <Info {...blueInfoData1} />
+          <Info {...blueInfoData2} />
+          <Info {...blueInfoData3} />
+          <Info {...blueInfoData4} />
+        </>
+      )}
     </>
   );
 };

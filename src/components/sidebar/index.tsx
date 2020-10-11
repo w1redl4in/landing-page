@@ -24,8 +24,10 @@ const Sidebar: React.FC = () => {
       </Icon>
       <SidebarWrapper>
         <SidebarMenu>
-          {menuItems.map((menuItem) => (
-            <SidebarLink to={menuItem.route}>{menuItem.title}</SidebarLink>
+          {menuItems.map((menuItem, id) => (
+            <SidebarLink key={id} to={menuItem.route}>
+              {menuItem.title}
+            </SidebarLink>
           ))}
         </SidebarMenu>
         <SideBtnWrap>

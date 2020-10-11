@@ -1,4 +1,4 @@
-import { GreenCar, GreenGraph, GreenPaper, GreenPig } from '../../images';
+import { BlueCar, BlueGraph, BluePaper, BluePig } from '../../images';
 
 export interface InfoData {
   id: string;
@@ -17,7 +17,7 @@ export interface InfoData {
   darkText: boolean;
 }
 
-export const infoData1: InfoData = {
+export const blueInfoData1: InfoData = {
   id: 'about',
   lightBg: true,
   lightText: false,
@@ -28,14 +28,14 @@ export const infoData1: InfoData = {
     'Get access to our exclusive app that allows you to send unlimited transactions without getting charged any fees.',
   buttonLabel: 'Get Started',
   imgStart: false,
-  img: GreenCar,
+  img: BlueCar,
   alt: 'Car',
   dark: false,
   primary: false,
   darkText: true,
 };
 
-export const infoData2: InfoData = {
+export const blueInfoData2: InfoData = {
   id: 'discover',
   lightBg: false,
   lightText: true,
@@ -46,14 +46,14 @@ export const infoData2: InfoData = {
     'We have you covered no matter where you are located. All you need is an internet connection and a phone or computer.',
   buttonLabel: 'Learn More',
   imgStart: true,
-  img: GreenGraph,
+  img: BlueGraph,
   alt: 'Piggybank',
   dark: true,
   primary: true,
   darkText: false,
 };
 
-export const infoData3: InfoData = {
+export const blueInfoData3: InfoData = {
   id: 'services',
   lightBg: true,
   lightText: false,
@@ -63,14 +63,14 @@ export const infoData3: InfoData = {
   description: `Get everything set up and ready in under 10 minutes. All you need to do is add your information and you're ready`,
   buttonLabel: 'Start Now',
   imgStart: false,
-  img: GreenPaper,
+  img: BluePaper,
   alt: 'Paper',
   dark: false,
   primary: false,
   darkText: true,
 };
 
-export const infoData4: InfoData = {
+export const blueInfoData4: InfoData = {
   id: 'signup',
   lightBg: false,
   lightText: true,
@@ -81,7 +81,7 @@ export const infoData4: InfoData = {
     'Get access to our exclusive app that allows you to send unlimited transactions without getting charged any fees.',
   buttonLabel: 'Get Started',
   imgStart: true,
-  img: GreenPig,
+  img: BluePig,
   alt: 'Car',
   dark: true,
   primary: true,

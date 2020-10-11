@@ -34,8 +34,8 @@ const Navbar: React.FC = () => {
             <FaBars />
           </MobileIcon>
           <NavMenu>
-            {menuItems.map((menuItem) => (
-              <NavItem>
+            {menuItems.map((menuItem, id) => (
+              <NavItem key={id}>
                 <NavLinks
                   to={menuItem.route}
                   smooth
