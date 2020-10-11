@@ -35,7 +35,7 @@ const MenuProvider: React.FC = ({ children }) => {
         route: 'services',
       },
       {
-        title: 'Sign Up',
+        title: 'Find Out More',
         route: 'signup',
       },
     ],

@@ -10,20 +10,29 @@ import {
   HeroH1,
   HeroP,
 } from './styles';
-import Video from '../../videos/video.mp4';
-import { Button } from 'react-scroll';
+import { Button } from '../button/styles';
+import { useTheme } from '../../hooks/theme';
+
+import GreenVideo from '../../videos/green.mp4';
+import BlueVideo from '../../videos/blue.mp4';
 
 const Hero: React.FC = () => {
   const [hover, setHover] = useState(false);
+  const { theme } = useTheme();
 
   const onHover = useCallback(() => {
     setHover(!hover);
   }, [hover]);
 
   return (
-    <HeroContainer>
+    <HeroContainer id="home">
       <HeroBg>
-        <VideoBg autoPlay loop muted src={Video} />
+        <VideoBg
+          autoPlay
+          loop
+          muted
+          src={theme === 'darkMode' ? GreenVideo : BlueVideo}
+        />
       </HeroBg>
       <HeroContent>
         <HeroH1>Virtual Banking Made Easy</HeroH1>
